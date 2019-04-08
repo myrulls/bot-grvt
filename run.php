@@ -59,6 +59,7 @@ $fullname = getStr($result, 'Generate</button></div></form><hr><h2>', '</h2>');
 $device_key = generateRandomString(16);
 $device_name = generateRandomString(5);
 $fcm_token = "fX5ISvkoaIY:APA91bHEd1LwVw2kh90D6vd83zSbCpiY1dhBAZsx7pAd9MpeJRTSOQoffzq43kWc6M7D34r_wvqMPq8BCwIWBvpLwpZMwu1qHI7a3Vd7kY8ngaIm1dp93gzOaT-".generateRandomString(17);
+$username = getStr($result, 'Username</div><div class="rght_h46">', '</div>');
 $username = $username.generateRandomString(3);
 $email = $username."@gmail.com";
 $password = generateRandomString(8);
