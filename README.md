@@ -6,8 +6,8 @@ UHIVE BOT Register With Referral
       $ pkg upgrade
       $ pkg install php
       $ pkg install git
-      $ git clone https://github.com/ilyasafr/bigtoken-bot.git
-      $ cd bigtoken-bot
+      $ git clone https://github.com/ilyasafr/bot-uhive.git
+      $ cd bot-uhive
 
 ## Run
       $ php run.php
