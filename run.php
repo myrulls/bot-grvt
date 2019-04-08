@@ -67,15 +67,11 @@ echo "\r\n";
 echo "[$i] [".date('h:i:s')."] Mendaftar-kan Akun...";
 echo "\r\n";
 
-$device_key = generateRandomString(16);
-$device_name = generateRandomString(5);
-$fcm_token = "fX5ISvkoaIY:APA91bHEd1LwVw2kh90D6vd83zSbCpiY1dhBAZsx7pAd9MpeJRTSOQoffzq43kWc6M7D34r_wvqMPq8BCwIWBvpLwpZMwu1qHI7a3Vd7kY8ngaIm1dp93gzOaT-".generateRandomString(17);
-$email = generateRandomString(10);
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, 'https://webapp.uhive.com/api/v1/users/signup');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, '{"device":{"device_key":"'.$device_key.'","device_name":"samsung SM-'.$device_name.'","fcm_token":"'.$fcm_token.'","os_type":"2","os_version":"22","timezone_offset":420},"email":"'.$email.'@gmail.com","signup_extra_info":{"invitation_code":"'.$code.'"},"language":"en","name":"'.$fullname.'","password":"'.$password.'"}');
+curl_setopt($ch, CURLOPT_POSTFIELDS, '{"device":{"device_key":"'.$device_key.'","device_name":"samsung SM-'.$device_name.'","fcm_token":"'.$fcm_token.'","os_type":"2","os_version":"22","timezone_offset":420},"email":"'.$email.'","signup_extra_info":{"invitation_code":"'.$code.'"},"language":"en","name":"'.$fullname.'","password":"'.$password.'"}');
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate');
 
