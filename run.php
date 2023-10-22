@@ -19,11 +19,11 @@ error_reporting(0);
         }
 echo '####################################';
 echo "\r\n";
-echo '# Copyright : @ilyasa48 | SGB-Team #';
+echo '# Copyright : @myrulls | SGB-Team #';
 echo "\r\n";
 echo '####################################';
 echo "\r\n";
-echo 'Masukkan Kode Referral (CD4Z9Q) : '; 
+echo 'Masukkan Kode Reff (3U4U0QL) : '; 
 $code = trim(fgets(STDIN)); 
 echo 'Masukkan Jumlah : '; 
 $jumlah = trim(fgets(STDIN)); 
@@ -70,14 +70,14 @@ echo "\r\n";
 
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, 'https://webapp.uhive.com/api/v1/users/signup');
+curl_setopt($ch, CURLOPT_URL, 'https://grvt.io/exchange/sign-up');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, '{"device":{"device_key":"'.$device_key.'","device_name":"samsung SM-'.$device_name.'","fcm_token":"'.$fcm_token.'","os_type":"2","os_version":"22","timezone_offset":420},"email":"'.$email.'","signup_extra_info":{"invitation_code":"'.$code.'"},"language":"en","name":"'.$fullname.'","password":"'.$password.'"}');
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate');
 
 $headers = array();
-$headers[] = 'Host: webapp.uhive.com';
+$headers[] = 'Host: https://grvt.io';
 $headers[] = 'Skip_authorization: true';
 $headers[] = 'Buildno: 2_0.5.4';
 $headers[] = 'Content-Type: application/json; charset=UTF-8';
